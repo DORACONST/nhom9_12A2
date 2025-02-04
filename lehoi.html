@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lễ Hội Bến Tre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #006400;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+        }
+        nav {
+            text-align: center;
+            background: #006400;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #b3d9ff;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .section:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 48%;
+        }
+        .content h2 {
+            color: #006400;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        .content img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+        .section img {
+            width: 48%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .section img:hover {
+            transform: scale(1.05);
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #006400;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>Lễ Hội Bến Tre</header>
+    <nav>
+        <a href="index.html">Trang Chủ</a>
+        <a href="vanhoa.html">Văn Hoá</a>
+        <a href="lehoi.html">Lễ Hội</a>
+        <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+    <div class="container">
+        <div class="section">
+            <div class="content">
+                <h2>Lễ Hội Dừa Bến Tre</h2>
+                <p>Lễ hội Dừa Bến Tre là sự kiện quan trọng diễn ra 4 năm một lần...</p>
+                <video controls>
+                    <source src="video/vd1.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+            </div>
+            <img src="anh/lh1.jpg" alt="Lễ hội Dừa Bến Tre">
+        </div>
+        <div class="section">
+            <img src="anh/lh2.jpg" alt="Lễ hội Nghinh Ông Bình Đại">
+            <div class="content">
+                <h2>Lễ Hội Nghinh Ông Bình Đại</h2>
+                <p>Lễ hội Nghinh Ông Bình Đại được tổ chức từ ngày 15 đến 17 tháng Giêng...</p>
+                <video controls>
+                    <source src="https://res.cloudinary.com/dycwnpaza/video/upload/v1738677481/TRAILER_-_%C4%90%E1%BA%B6C_S%E1%BA%AEC_L%E1%BB%84_H%E1%BB%98I_C%E1%BA%A6U_NG%C6%AF_4K_dq9jq1.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h2>Lễ Hội Cúng Đình Phú Lễ</h2>
+                <p>Lễ hội Cúng Đình Phú Lễ được tổ chức vào ngày 18-19 tháng 3 (Âm lịch)...</p>
+                <video controls>
+                    <source src="https://res.cloudinary.com/dycwnpaza/video/upload/v1738678090/%C4%90%C3%8CNH_PH%C3%9A_L%E1%BB%84_-_N%C3%89T_%C4%90%E1%BA%B6C_TR%C6%AFNG_V%C4%82N_H%C3%93A_QU%C3%8A_H%C6%AF%C6%A0NG_1_u4say4.mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+            </div>
+            <img src="anh/lh3.jpg" alt="Lễ hội Cúng Đình Phú Lễ">
+        </div>
+    </div>
+    <a href="index.html" class="back-link">⬅ Quay lại trang chính</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let videos = document.querySelectorAll("video");
+
+            videos.forEach(video => {
+                video.addEventListener("play", function() {
+                    videos.forEach(otherVideo => {
+                        if (otherVideo !== video) {
+                            otherVideo.pause();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+   <footer style="background: #006400; color: white; text-align: center; padding: 20px; box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.2);">
+        <p>Liên hệ: <a href="mailto:vienpham941@gmail.com">lienhe@bentre.com</a> | Điện thoại: 0384944812</p>
+        <p>&copy; 2025 Văn Hóa & Lễ Hội Bến Tre.</p>
+    </footer>
+</body>
+</html>
